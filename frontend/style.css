@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+
+/* ================= GLOBAL ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdf8f3;
+  color: #3e2c23;
+  line-height: 1.6;
+}
+
+/* ================= SIDEBAR LAYOUT ================= */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: #1f2a3a;
+  color: #fff;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar-logo {
+  text-align: center;
+}
+
+.sidebar-logo h2 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.sidebar-logo p {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.sidebar-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.sidebar-nav a:hover {
+  color: #c49a6c;
+  padding-left: 6px;
+}
+
+.sidebar-footer {
+  font-size: 12px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* ================= HERO ================= */
+
+.hero-section {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  /* Burger / Pizza Image */
+  background: url("https://images.unsplash.com/photo-1565299624946-b28f40a0ae38") center/cover no-repeat;
+}
+
+/* Dark Overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-overlay {
+  position: relative;
+  margin-left: 100px;
+  max-width: 600px;
+  color: #fff;
+}
+
+.small-heading {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.hero-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text {
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 450px;
+  opacity: 0.9;
+}
+
+.open-hours span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.open-hours h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* ================= SECTIONS BELOW HERO ================= */
+
+.menu,
+.about,
+.contact,
+footer {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+
+/* ================= MENU ================= */
+
+.menu {
+  padding: 100px 80px;
+  background: #fffaf5;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #8b5e3c;
+  font-size: 20px;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0e6dd;
+  font-size: 14px;
+}
+
+.card ul li:last-child {
+  border-bottom: none;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 100px 80px;
+  background: #f7efe8;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 16px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+  padding: 100px 80px;
+  background: #fffaf5;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 10px;
+}
+
+/* Delivery Buttons */
+
+.delivery-section {
+  margin-top: 30px;
+}
+
+.delivery-heading {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.delivery-badges {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.delivery-card {
+  padding: 14px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.delivery-card.zomato {
+  background: #e23744;
+}
+
+.delivery-card.swiggy {
+  background: #fc8019;
+}
+
+.delivery-card:hover {
+  transform: translateY(-5px);
+}
+
+.available-badge {
+  margin-top: 18px;
+  display: inline-block;
+  padding: 8px 25px;
+  background: #3e2c23;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #3e2c23;
+  color: #fdf8f3;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .hero-section,
+  .menu,
+  .about,
+  .contact,
+  footer {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hero-overlay {
+    margin: 60px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 40px;
+  }
+}
